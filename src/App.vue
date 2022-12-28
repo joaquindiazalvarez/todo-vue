@@ -1,17 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <input type="text"/>
+  <ul id="todo">
+    <li v-for="(element, index) in arr" v-bind:key="index">{{ element }}</li>
+  </ul>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+let arr = ['hola','chao'];
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data(){
+    return{
+    arr:arr
+    }
   }
 }
+  
 </script>
 
 <style>
